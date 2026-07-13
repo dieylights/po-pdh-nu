@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan PDH NU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Banner Teks Berjalan / Pengumuman Atas -->
+    <div class="top-banner">
+        <marquee scrollamount="5">🔥 OPEN PO PDH NU — DITUTUP AHAD JAM 23.00! SEGERA LAKUKAN PEMBAYARAN YA!!! 🔥</marquee>
+    </div>
+
+    <!-- Container Utama Form -->
+    <div class="form-container">
+        
+        <!-- Header Card -->
+        <div class="form-header">
+            <h2>📝 PDH NU</h2>
+            <p>Silakan isi data diri dengan lengkap & benar</p>
+        </div>
+
+        <!-- Isi Form -->
+        <form class="form-body" id="orderForm">
+            
+            <!-- Input Nama -->
+            <div class="input-group">
+                <label>👤 Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Contoh: Nawasena Drestanta" required>
+            </div>
+
+            <!-- Input No HP -->
+            <div class="input-group">
+                <label>📞 No HP Aktif</label>
+                <input type="tel" id="nohp" placeholder="Contoh: 085211101811" required>
+            </div>
+
+            <!-- Input Alamat -->
+            <div class="input-group">
+                <label>📍 Alamat Lengkap Pengiriman</label>
+                <textarea id="alamat" placeholder="Jalan, RT.00 RW.00, Kecamatan, Kota, Kode Pos" rows="3" required></textarea>
+            </div>
+
+            <!-- Alert Box: Pemberitahuan Waktu -->
+            <div class="alert-box danger">
+                <strong>⏰ PEMBERITAHUAN WAKTU:</strong>
+                <p>PO akan kami tutup pada <strong>AHAD pukul 23.00 WIB</strong>.</p>
+                <p>Setelah isi formulir diharapkan segera melakukan transfer.</p>
+                <p class="highlight-danger">Transfer di atas jam 23.00 akan kami kembalikan.</p>
+            </div>
+
+            <!-- Info Produk -->
+            <div class="alert-box info-product">
+                <strong>📦 Barang: PDH NU</strong>
+                <h3 class="price">Rp 155.000 / pcs</h3>
+                <small class="warning-text">⚠️ MAKSIMAL PEMBELIAN 28 PCS</small>
+            </div>
+
+            <!-- Dropdown Jumlah Pesanan -->
+            <div class="input-group">
+                <label>🛒 Jumlah Pesanan</label>
+                <select id="jumlah" required>
+                    <option value="" disabled selected>-- Pilih Jumlah Pesanan --</option>
+                    <option value="1">1 pcs</option>
+                    <option value="28">28 pcs</option>
+                </select>
+            </div>
+
+            <!-- Box Rekening Transfer -->
+            <div class="alert-box transfer-box">
+                <strong>💳 SILAKAN TRANSFER KE:</strong>
+                <p class="bank-name">Sea Bank</p>
+                <div class="rekening-wrapper">
+                    <span class="no-rek" id="norek">901456002629</span>
+                    <button type="button" class="btn-copy" onclick="copyRekening()">📋 Salin</button>
+                </div>
+                <p class="owner-name">a.n. Ady Cahyadi</p>
+            </div>
+
+            <!-- Catatan Tambahan Kuning -->
+            <div class="alert-box warning-box">
+                <p>⚠️ Harga di atas **BELUM TERMASUK ONGKIR**</p>
+                <p>⚠️ Hanya transfer ke rekening di atas / Admin resmi</p>
+            </div>
+
+            <!-- Tombol Kirim WhatsApp -->
+            <button type="button" class="btn-submit" onclick="kirimWhatsApp()">📲 Kirim Pesanan ke WhatsApp</button>
+
+        </form>
+    </div>
+
+    <!-- Menghubungkan ke JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
